@@ -42,7 +42,7 @@ a:hover {
 .line[alternate=odd] {}
 .line[type=action] {
   font-style: italic;
-  color: #586E75;
+  color: #2AA198;
 }
 .line[type=action] .sender:before {
   content: ""
