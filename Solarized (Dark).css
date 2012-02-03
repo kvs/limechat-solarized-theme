@@ -92,6 +92,9 @@ body.normal .sender {
 .sender[type=myself] {
   color: #B58900;
 }
+.sender[type=myself] + .message {
+  color: #858900;
+}
 .sender[type=normal] { 
   color: #859900;
 }
