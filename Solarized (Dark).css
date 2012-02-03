@@ -95,6 +95,54 @@ body.normal .sender {
 .sender[type=normal] { 
   color: #859900;
 }
+.sender[type=normal][colornumber='0'] {
+  color: #red;
+}
+.sender[type=normal][colornumber='1'] {
+  color: #636aff;
+}
+.sender[type=normal][colornumber='2'] {
+  color: #00BA00;
+}
+.sender[type=normal][colornumber='3'] {
+  color: #C083F2;
+}
+.sender[type=normal][colornumber='4'] {
+  color: #4DEDF0;
+}
+.sender[type=normal][colornumber='5'] {
+  color: #E422B2;
+}
+.sender[type=normal][colornumber='6'] {
+  color: #EAE87E;
+}
+.sender[type=normal][colornumber='7'] {
+  color: #B8DFFF;
+}
+.sender[type=normal][colornumber='8'] {
+  color: #75A1FB;
+}
+.sender[type=normal][colornumber='9'] {
+  color: #97C74B;
+}
+.sender[type=normal][colornumber='10'] {
+  color: #A5EAC4;
+}
+.sender[type=normal][colornumber='11'] {
+  color: #FFA6A0;
+}
+.sender[type=normal][colornumber='12'] {
+  color: #8E67E7;
+}
+.sender[type=normal][colornumber='13'] {
+  color: #FFBB58;
+}
+.sender[type=normal][colornumber='14'] {
+  color: #EDD7AD;
+}
+.sender[type=normal][colornumber='15'] {
+  color: #FF1676;
+}
 .inlineimage {
   padding: 0;
   margin: 0.5em 0;
