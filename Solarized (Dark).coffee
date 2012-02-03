@@ -1,7 +1,7 @@
 #
 #-----------------------------------------------------------------------------
-#  A limechat theme by Tad Thorley
-#  The solarized color scheme is by Ethan Schoonover
+#  A LimeChat theme by Tad Thorley
+#  Modified by Kenneth Vestergaard
 #-----------------------------------------------------------------------------
 #
 String.prototype.startsWith = (str) -> @indexOf(str) == 0
@@ -12,13 +12,14 @@ class SolarizedDark
     @initializeVars()
     @createTopicNode()
     @addListeners()
-  
+
   initializeVars: ->
     @hideEvents = false
-    @doc   = document
-    @body  = document.body
-    @topic = null
-      
+    @doc    = document
+    @body   = document.body
+    @topic  = null
+    @marker = null
+
   createTopicNode: ->
     @topic = @getNode('topic')
     if @topic == null
@@ -33,10 +34,23 @@ class SolarizedDark
   addListeners: ->
     processNode = (ev) =>
       node = ev.target
-      if @bodyAttribute('type') == 'channel'
+
+      # Delete previous marker when inserting a new
+      if node.id == 'mark' && @marker != node && @marker != null
+        @marker.parentNode.removeChild(@marker)
+
+      # Replace message from ZNC's '*offlinemarker' with marker
+      else if node.className && node.className.includes('line') && node.getAttribute("nick") == "*offlinemarker"
+        @marker.parentNode.removeChild(@marker) if @marker != null
+        @marker = @doc.createElement('hr')
+        @marker.id = 'mark'
+        node.parentNode.replaceChild(@marker, node)
+
+      else if @bodyAttribute('type') == 'channel'
         @checkTimestamp(node)
         @checkTopic(node)
         @checkEvent(node)
+
     @doc.addEventListener("DOMNodeInserted", processNode, false)
   
   checkTimestamp: (node) ->
@@ -71,5 +85,4 @@ class SolarizedDark
   
   getNode: (id) -> @doc.getElementById(id)
   
-
-solarized_dark = new SolarizedDark
+new SolarizedDark
