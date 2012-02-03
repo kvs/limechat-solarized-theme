@@ -24,7 +24,14 @@ body[type=talk] {}
 body[type=console] {}
 body[channelname=#limechat] {}
 
-hr { margin: 0.5em 2em; }
+hr {
+    margin: 1px 2em;
+    padding: 2px;
+    border: none;
+    background-color: #2aa198;
+    height: 0px;
+    text-align: center;
+}
 a {
   color: #268BD2;
   text-decoration: none;
