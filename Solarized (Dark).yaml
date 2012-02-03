@@ -16,7 +16,7 @@ input-text:
     
 member-list:
   font-family: 'Lucida Grande'
-  font-size: 12.0
+  font-size: 11.0
   color: '#93A1A1'
   background-color: '#002B36'
   operator:
@@ -31,7 +31,7 @@ member-list:
         
 server-tree:
   font-family: 'Lucida Grande'
-  font-size: 12.0
+  font-size: 11.0
   background-color: '#002B36'
   highlight:
     color: '#CB4B16'
