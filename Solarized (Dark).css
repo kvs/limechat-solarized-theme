@@ -6,7 +6,7 @@
 html {
   font-family: "Menlo", sans-serif;
   font-size: 9pt;
-  background-color: #073642;
+  background-color: #002B36;
   color: #93A1A1;
   word-wrap: break-word;
   margin: 0;
@@ -155,7 +155,7 @@ body.normal .sender {
 body.console {
   font-family: "Meslo", "Menlo", "Courier New", monospace;
   padding: 0px 12px;
-  background-color: #073642;
+  background-color: #002B36;
 }
 body.console a {
   color: #268BD2;
@@ -201,8 +201,8 @@ body.console .time {
 }
 
 #topic {
-  color: #073642;
-  background-color: #586E75;
+  color: #93a1a1;
+  background-color: #073642;
   padding: 0.25em 0;
   margin: 0;
   min-height: 1.0em;
